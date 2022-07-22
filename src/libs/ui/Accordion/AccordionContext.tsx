@@ -18,6 +18,4 @@ export const useAccordionContext = () => {
   return context;
 };
 
-const AccordionProvider = AccordionContext.Provider;
-
-export default AccordionProvider;
+export default AccordionContext;
