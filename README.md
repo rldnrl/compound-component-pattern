@@ -255,5 +255,5 @@ export default App;
 
 Compound Component 패턴을 공부하면서 느낀 것은 관련 있는 컴포넌트끼리 State를 공유하는 것이 관심사 분리적인 면에서 좋다는 것입니다. 컴포넌트를 만들다보면, State가 거대해지고, Props가 거대해지는 것을 많이 경험했습니다. 추가적으로 Props Drilling까지 일어나게 되죠. State와 로직을 Context에서 관리하고 그것을 구독하고 있는 컴포넌트에서 가져다 쓰는 게 깔끔한 것 같습니다.
 
-### 출처
-[React compound components (Hooks + typescript)](https://hashnode.com/post/react-compound-components-hooks-typescript-ckpf00izg033kkms134jo828m)
+## 출처
+- [React compound components (Hooks + typescript)](https://hashnode.com/post/react-compound-components-hooks-typescript-ckpf00izg033kkms134jo828m)
