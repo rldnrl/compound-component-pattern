@@ -1,0 +1,27 @@
+.accordion {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button {
+  padding: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.accordion-panel {
+  padding: 5px;
+  transition: all 0.15s ease-in-out;
+}
+
+.show-item {
+  max-height: 100px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hide-item {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
