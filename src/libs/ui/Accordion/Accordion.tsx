@@ -13,6 +13,7 @@ const Accordion: FunctionComponent<AccrodionProps> = ({ children }) => {
   const changeActiveItem = useCallback(
     (value: string) => {
       if (activeItem !== value) setActiveItem(value);
+      if (activeItem === value) setActiveItem("");
     },
     [setActiveItem, activeItem]
   );
