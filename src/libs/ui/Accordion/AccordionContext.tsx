@@ -10,12 +10,6 @@ const AccordionContext = createContext<AccordionContextType>({
   changeSelectedItem: () => {},
 });
 
-export const useAccordionContext = () => {
-  const context = useContext(AccordionContext);
-  if (!context) {
-    throw new Error("Error in creating the context");
-  }
-  return context;
-};
+export const useAccordionContext = () => useContext(AccordionContext);
 
 export default AccordionContext;
