@@ -19,11 +19,19 @@ const AccordionButton: FunctionComponent<AccordionButtonProps> = ({
   }, [changeSelectedItem, label]);
 
   return (
-    <div
-      onClick={accordionButtonClickHandler}
-      className={`accordion-button ${className}`}
-    >
-      {children}
+    <div>
+      <button
+        onClick={accordionButtonClickHandler}
+        className={`accordion-button ${className}`}
+        style={{
+          width: "100%",
+          border: "none",
+          padding: "0.5rem 1rem",
+          fontSize: "18px",
+        }}
+      >
+        {children}
+      </button>
     </div>
   );
 };
