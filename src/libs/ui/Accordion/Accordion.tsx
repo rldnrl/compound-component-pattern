@@ -1,13 +1,19 @@
-import { FunctionComponent, ReactNode, useCallback, useState } from "react";
+import {
+  FunctionComponent,
+  ReactNode,
+  useCallback,
+  useMemo,
+  useState,
+} from "react";
 import AccordionContext from "./AccordionContext";
 
 import "./Accordion.style.css";
 
-export type AccrodionProps = {
+export type AccordionProps = {
   children: ReactNode | ReactNode[];
 };
 
-const Accordion: FunctionComponent<AccrodionProps> = ({ children }) => {
+const Accordion: FunctionComponent<AccordionProps> = ({ children }) => {
   const [activeItem, setActiveItem] = useState("");
 
   const changeActiveItem = useCallback(
@@ -18,10 +24,13 @@ const Accordion: FunctionComponent<AccrodionProps> = ({ children }) => {
     [setActiveItem, activeItem]
   );
 
+  const providerValue = useMemo(
+    () => ({ activeItem, changeSelectedItem: changeActiveItem }),
+    [activeItem, changeActiveItem]
+  );
+
   return (
-    <AccordionContext.Provider
-      value={{ activeItem, changeSelectedItem: changeActiveItem }}
-    >
+    <AccordionContext.Provider value={providerValue}>
       {children}
     </AccordionContext.Provider>
   );
